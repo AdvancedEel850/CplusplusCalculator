@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 using namespace std;
 
 int addition(double a, double b)
