@@ -1,7 +1,22 @@
 #include <iostream>
-#include <ostream>
+#include <fstream>
 using namespace std;
 
+int file(double result, double a, double b, string mathfunc)
+{
+    fstream my_file;
+    my_file.open("my_file", ios::out);
+    if (!my_file)
+    {
+        cout << "File not Created.";
+    }
+    else
+    {
+        my_file << a << " " + mathfunc + " " << b << " = " << result;
+        my_file.close();
+    }
+    return 0;
+}
 int addition(double a, double b)
 {
     double result;
@@ -10,6 +25,7 @@ int addition(double a, double b)
 
     cout << "Result is: " << result << endl << endl;
 
+    file(result, a, b, "addition");
     return 0;
 }
 
