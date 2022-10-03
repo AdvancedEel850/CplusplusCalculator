@@ -2,6 +2,7 @@
 #include <fstream>
 using namespace std;
 
+// This allows you to see a history of what calulations have been done.
 int file_history()
 {
     fstream my_file;
@@ -9,6 +10,7 @@ int file_history()
 
     cout << endl;
 
+    // Open file
     my_file.open("history.txt", ios::in);
     if (!my_file)
     {
@@ -26,6 +28,7 @@ int file_history()
     cout << endl;
     return 0;
 }
+// Clears History.
 int file_clear()
 {
     fstream my_file;
@@ -42,6 +45,7 @@ int file_clear()
     return 0;
 
 }
+// Writes the calculations to the file to act as a history.
 int file_write(double result, double a, double b, string mathfunc)
 {
     fstream my_file;
@@ -57,6 +61,7 @@ int file_write(double result, double a, double b, string mathfunc)
     }
     return 0;
 }
+// This will add two numbers.
 int addition(double a, double b)
 {
     double result;
@@ -68,7 +73,7 @@ int addition(double a, double b)
     file_write(result, a, b, "+");
     return 0;
 }
-
+// This will subtract two numbers
 int subtraction(double a, double b)
 {
     double result;
@@ -80,7 +85,7 @@ int subtraction(double a, double b)
     file_write(result, a, b, "-");
     return 0;
 }
-
+// This will multiply two numbers
 int multiplication(double a, double b)
 {
     double result;
@@ -92,7 +97,7 @@ int multiplication(double a, double b)
     file_write(result, a, b, "X");
     return 0;
 }
-
+// Divids two numbers
 int division(double a, double b)
 {
 
@@ -105,7 +110,7 @@ int division(double a, double b)
     file_write(result, a, b, "/");
     return 0;
 }
-
+// Mathmatical function menu
 int menu()
 {
     double count;
@@ -158,7 +163,7 @@ int menu()
 
     return 0;
 }
-
+// main menu
 int main()
 {
     double count;
