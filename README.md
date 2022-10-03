@@ -4,7 +4,7 @@ I wrote software to demonstrate a basic calculator. This includes the basic func
 
 I wanted to learn more about the c++ language as well as become more fluent in other programming languages. It provided a good challenge as well as an oppertunity to learn.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/EoHh6VlwzN8)
 
 # Development Environment
 
